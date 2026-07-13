@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Maurício Cáceres | Advocacia Trabalhista Especializada</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --dourado: #b08d57;
+            --preto: #1a1a1a;
+            --branco: #ffffff;
+            --cinza-fundo: #f8f9fa;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Montserrat', sans-serif; line-height: 1.6; color: var(--preto); }
+
+        /* Header */
+        header { padding: 25px; text-align: center; background: var(--branco); border-bottom: 1px solid #eee; }
+        .logo-text { font-family: 'Playfair Display', serif; font-size: 28px; letter-spacing: 2px; }
+        .sub-logo { font-size: 12px; color: var(--dourado); font-weight: 700; letter-spacing: 4px; margin-top: 5px; text-transform: uppercase; }
+
+        /* Hero */
+        .hero {
+            padding: 80px 20px; text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=1470');
+            background-size: cover; background-position: center; color: var(--branco);
+        }
+        .hero h1 { font-family: 'Playfair Display', serif; font-size: 2.8rem; margin-bottom: 25px; line-height: 1.2; }
+        .hero p { font-size: 1.2rem; margin-bottom: 35px; max-width: 800px; margin-left: auto; margin-right: auto; color: #ccc; }
+
+        /* Botão Principal */
+        .btn-principal {
+            background-color: #25d366; color: white; padding: 20px 40px;
+            text-decoration: none; border-radius: 5px; font-weight: 700; font-size: 1.1rem;
+            display: inline-block; transition: 0.3s; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+        }
+        .btn-principal:hover { transform: translateY(-3px); background-color: #1ebe57; }
+
+        /* Seção Problemas */
+        .urgente { padding: 80px 20px; background: var(--cinza-fundo); text-align: center; }
+        .urgente h2 { font-family: 'Playfair Display', serif; margin-bottom: 40px; font-size: 2.2rem; }
+        .grid-dores {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px; max-width: 1200px; margin: 0 auto;
+        }
+        .dor-item { background: white; padding: 30px; border-left: 5px solid var(--dourado); text-align: left; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+        .dor-item i { color: var(--dourado); font-size: 24px; margin-bottom: 15px; }
+
+        /* Sobre */
+        .sobre { padding: 80px 20px; background: white; }
+        .container-sobre { max-width: 1100px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 50px; align-items: center; }
+        .texto-sobre { flex: 1.5; min-width: 300px; }
+        .texto-sobre h2 { font-family: 'Playfair Display', serif; font-size: 2.4rem; margin-bottom: 20px; }
+        .badges { display: flex; gap: 15px; margin-top: 30px; }
+        .badge { border: 1px solid var(--dourado); color: var(--dourado); padding: 8px 15px; font-size: 14px; font-weight: 600; border-radius: 4px; }
+
+        /* FAQ */
+        .faq { padding: 80px 20px; background: var(--cinza-fundo); }
+        .faq h2 { text-align: center; font-family: 'Playfair Display', serif; margin-bottom: 50px; }
+        .faq-item { max-width: 850px; margin: 0 auto 20px; background: white; padding: 25px; border-radius: 8px; border: 1px solid #eee; }
+        .faq-item h4 { color: var(--preto); margin-bottom: 12px; font-size: 1.1rem; border-bottom: 1px solid #f1f1f1; padding-bottom: 10px; }
+        .faq-item p { color: #555; font-size: 1rem; }
+
+        /* Footer */
+        footer { background: #111; color: white; padding: 60px 20px; text-align: center; }
+        .footer-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; text-align: left; border-bottom: 1px solid #333; padding-bottom: 40px; margin-bottom: 30px; }
+        
+        .wpp-float { position: fixed; bottom: 30px; right: 30px; background: #25d366; width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 35px; box-shadow: 0 4px 20px rgba(0,0,0,0.3); z-index: 1000; }
+
+        @media (max-width: 768px) { .hero h1 { font-size: 2rem; } .hero p { font-size: 1rem; } }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-text">MAURÍCIO CÁCERES</div>
+        <div class="sub-logo">ADVOGADO TRABALHISTA</div>
+    </header>
+
+    <section class="hero">
+        <h1>Garantindo os Direitos de quem move o Brasil</h1>
+        <p>Experiência de mais de 4 anos na defesa estratégica do trabalhador. Atendimento transparente, ágil e focado na sua justiça.</p>
+        <a href="https://wa.me/5555999724347" class="btn-principal">
+            <i class="fab fa-whatsapp"></i> FALAR COM ESPECIALISTA AGORA
+        </a>
+    </section>
+
+    <section class="urgente">
+        <h2>Como o escritório pode te ajudar?</h2>
+        <div class="grid-dores">
+            <div class="dor-item">
+                <i class="fas fa-hand-holding-usd"></i>
+                <h4>Verbas Rescisórias</h4>
+                <p>Análise detalhada de rescisões para garantir que cada centavo seja pago corretamente.</p>
+            </div>
+            <div class="dor-item">
+                <i class="fas fa-clock"></i>
+                <h4>Jornada Abusiva</h4>
+                <p>Cobrança de horas extras, intervalos não gozados e bancos de horas irregulares.</p>
+            </div>
+            <div class="dor-item">
+                <i class="fas fa-id-card-alt"></i>
+                <h4>Reconhecimento de Vínculo</h4>
+                <p>Para quem trabalha sem carteira assinada mas possui obrigações de funcionário.</p>
+            </div>
+            <div class="dor-item">
+                <i class="fas fa-door-open"></i>
+                <h4>Rescisão Indireta</h4>
+                <p>Saia da empresa com todos os seus direitos quando o empregador descumpre a lei.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="sobre">
+        <div class="container-sobre">
+            <div class="texto-sobre">
+                <h2>Experiência e Compromisso</h2>
+                <p>O <strong>Dr. Maurício Cáceres (OAB/RS 141.509)</strong> atua de forma humanizada, entendendo que por trás de cada processo existe uma família e uma história de dedicação.</p>
+                <p>Com <strong>mais de 4 anos de experiência</strong> sólida na área trabalhista, o escritório em Santa Maria foca em resultados reais através de uma análise jurídica técnica e incisiva.</p>
+                <div class="badges">
+                    <div class="badge">OAB/RS 141.509</div>
+                    <div class="badge">+4 Anos de Atuação</div>
+                    <div class="badge">Atendimento em Santa Maria e Região</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq">
+        <h2>Perguntas Frequentes</h2>
+        <div class="faq-item">
+            <h4>Quanto custa para entrar com uma ação trabalhista?</h4>
+            <p>Cada situação jurídica possui suas particularidades e complexidades únicas. Por isso, <strong>cada caso é analisado de forma individualizada</strong>. No nosso escritório, trabalhamos com honorários justos e um modelo de atuação totalmente <strong>focado em resultados</strong>, garantindo que você tenha o suporte necessário sem inviabilizar a busca pelos seus direitos.</p>
+        </div>
+        <div class="faq-item">
+            <h4>Preciso pagar algo se eu perder o processo?</h4>
+            <p>Atualmente, para quem possui direito à justiça gratuita, os riscos financeiros são mínimos. Analisamos a viabilidade da sua causa antes de qualquer passo judicial.</p>
+        </div>
+        <div class="faq-item">
+            <h4>Quanto tempo demora um processo?</h4>
+            <p>O tempo varia conforme a complexidade, mas priorizamos sempre o acordo quando ele é vantajoso para o trabalhador, visando agilidade.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <div class="logo-text" style="font-size: 20px;">MAURÍCIO CÁCERES</div>
+                <p>Advogado Trabalhista | OAB/RS 141.509</p>
+                <p>Experiência de +4 anos defendendo o trabalhador.</p>
+            </div>
+            <div>
+                <h4>Localização</h4>
+                <p><i class="fas fa-map-marker-alt"></i> R. Venâncio Aires, 1079</p>
+                <p>Centro, Santa Maria - RS | 97010-001</p>
+            </div>
+            <div>
+                <h4>Contato</h4>
+                <p><i class="fas fa-phone"></i> (55) 9 99972-4347</p>
+                <p><i class="fas fa-envelope"></i> mauriciocaceres.adv@gmail.com</p>
+            </div>
+        </div>
+        <p style="font-size: 13px; opacity: 0.7;">&copy; 2026 Maurício Cáceres Advogado Trabalhista. Todos os direitos reservados.</p>
+    </footer>
+
+    <a href="https://wa.me/5555999724347" class="wpp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+</body>
+</html>
